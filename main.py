@@ -16,6 +16,7 @@ class MyWidget(QMainWindow):
         pass
 
     def play(self):
+        a = 15
         pass
 
 
