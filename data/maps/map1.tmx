@@ -3,7 +3,7 @@
  <tileset firstgid="1" source="bckg.tsx"/>
  <layer id="1" name="Слой тайлов 1" width="10" height="10">
   <data encoding="base64" compression="zlib">
-   eJwLZGBgsINiRijNhCRWC8SOSHwQFoXSYlA6EEkdE5JZTFjMhqkTQzIL2RxRNHVaBHAoVJ0mDjwBSk+EqtMhgDOh6mDuRQ6PQCQ+zH2iUH4gkj9g/hVDCz9keZhZ6P4FAKgUFVA=
+   eJwLZGBgsINiRijNhCSGDYtCaTEoHYgkx4RkFhMWs+3Q9IqimSOKpk6LSKyJA09A4+sQiZHdC/NHIANm+IhC+YFI/oD5F5lvh8YPZEANSxgGAJP6Em4=
   </data>
  </layer>
 </map>
