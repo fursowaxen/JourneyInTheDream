@@ -15,12 +15,12 @@ TIME = 0
 def playing(filename, screen):
     global TIME
     try:
-        pygame.mixer.music.load('data/kevin-macleod-8bit-dungeon-level.mp3')
+        pygame.mixer.music.load('data/xDeviruchi - Title Theme .wav')
         pygame.mixer.music.play()
         pygame.mixer.music.set_volume(0.2)
     except Exception:
         pass
-    # создаем карту лвла и героя
+
     if filename == 'map1.tmx':
         lvl = Level1(filename, FREE_TILES)
     elif filename == 'map2.tmx':
@@ -37,8 +37,8 @@ def playing(filename, screen):
     else:
         hero = Hero((0, 5), False)
 
-    game = Game(lvl, hero)          # создаем класс для игры
-    running = True          # начинаем игру
+    game = Game(lvl, hero)
+    running = True
     clock = pygame.time.Clock()
     m = Minigame(int(filename[3]))
     first_phrase = True
@@ -65,7 +65,6 @@ def playing(filename, screen):
                         hold_btn -= 1
                     if event.key in (pygame.K_UP, pygame.K_DOWN, pygame.K_RIGHT, pygame.K_LEFT) and hold_btn == 0:
                         hero.staying = True
-
 
         game.update_hero()
         game.render(screen)

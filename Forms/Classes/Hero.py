@@ -22,7 +22,6 @@ class Hero:
         self.x, self.y = pos
 
     def render(self, screen):
-        # screen.blit(self.image, (self.x * TILE_SIZE, self.y * TILE_SIZE))
         clock = pygame.time.Clock()
         self.count = (self.count + clock.tick(FPS)) % 500
         if not self.staying:
@@ -31,23 +30,6 @@ class Hero:
             else:
                 self.image = load_image(f'pictures/chars/{self.dir}_R.png')
 
-            # if self.dir == "right":
-            #     if self.count % 500 > 250:
-            #         self.image = load_image('pictures/chars/right_L.png')
-            #     else:
-            #         self.image = load_image('pictures/chars/right_R.png')
-            #
-            # if self.dir == "up":
-            #     if self.count % 500 > 250:
-            #         self.image = load_image('pictures/chars/up_L.png')
-            #     else:
-            #         self.image = load_image('pictures/chars/up_R.png')
-            #
-            # if self.dir == "down":
-            #     if self.count % 500 > 250:
-            #         self.image = load_image('pictures/chars/down_L.png')
-            #     else:
-            #         self.image = load_image('pictures/chars/down_R.png')
         else:
             self.image = load_image(f'pictures/chars/{self.dir}_S.png')
         screen.blit(self.image, (self.x * TILE_SIZE, self.y * TILE_SIZE))

@@ -25,7 +25,8 @@ class Game:
                             next_x -= 0.1
 
                     else:
-                        if self.lvl.get_tile_id((int(next_x), int(next_y))) in FREE_TILES and self.lvl.get_tile_id((int(next_x), int(next_y) + 1)) in FREE_TILES:
+                        if (self.lvl.get_tile_id((int(next_x), int(next_y))) in FREE_TILES
+                                and self.lvl.get_tile_id((int(next_x), int(next_y) + 1)) in FREE_TILES):
                             next_x -= 0.1
 
             if pygame.key.get_pressed()[pygame.K_RIGHT]:
@@ -37,7 +38,8 @@ class Game:
                         if self.lvl.get_tile_id((int(next_x) + 1, int(next_y))) in FREE_TILES:
                             next_x += 0.1
                     else:
-                        if self.lvl.get_tile_id((int(next_x) + 1, int(next_y))) in FREE_TILES and self.lvl.get_tile_id((int(next_x) + 1, int(next_y) + 1)) in FREE_TILES:
+                        if (self.lvl.get_tile_id((int(next_x) + 1, int(next_y))) in FREE_TILES
+                                and self.lvl.get_tile_id((int(next_x) + 1, int(next_y) + 1)) in FREE_TILES):
                             next_x += 0.1
 
             if pygame.key.get_pressed()[pygame.K_DOWN]:
@@ -48,7 +50,8 @@ class Game:
                         if self.lvl.get_tile_id((int(next_x), int(next_y) + 1)) in FREE_TILES:
                             next_y += 0.1
                     else:
-                        if self.lvl.get_tile_id((int(next_x), int(next_y) + 1)) in FREE_TILES and self.lvl.get_tile_id((int(next_x) + 1, int(next_y) + 1)) in FREE_TILES:
+                        if (self.lvl.get_tile_id((int(next_x), int(next_y) + 1)) in FREE_TILES
+                                and self.lvl.get_tile_id((int(next_x) + 1, int(next_y) + 1)) in FREE_TILES):
                             next_y += 0.1
 
             if pygame.key.get_pressed()[pygame.K_UP]:
@@ -58,7 +61,8 @@ class Game:
                         if self.lvl.get_tile_id((int(next_x), int(next_y))) in FREE_TILES:
                             next_y -= 0.1
                     else:
-                        if self.lvl.get_tile_id((int(next_x), int(next_y))) in FREE_TILES and self.lvl.get_tile_id((int(next_x) + 1, int(next_y))) in FREE_TILES:
+                        if (self.lvl.get_tile_id((int(next_x), int(next_y))) in FREE_TILES
+                                and self.lvl.get_tile_id((int(next_x) + 1, int(next_y))) in FREE_TILES):
                             next_y -= 0.1
 
             next_x, next_y = round(next_x, 1), round(next_y, 1)

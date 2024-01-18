@@ -19,11 +19,11 @@ def show_message(screen, filename, can_go, end=False):
             if filename == 'map1.tmx':
                 txt = 'этот камень так ярко светится!'
             if filename == 'map2.tmx':
-                txt = 'держи топор. пока'
+                txt = 'теперь у меня есть топор'
             if filename == 'map3.tmx':
                 txt = 'из этих ягод можно сделать зелье'
             if filename == 'map4.tmx':
-                txt = 'ааааа'
+                txt = 'ааааа!'
         if filename == 'intro':
             txt = 'нужно уходить отсюда!'
         if filename == 'too_long':
@@ -35,8 +35,12 @@ def show_message(screen, filename, can_go, end=False):
         txt_h = text.get_height()
         txt_x = WINDOW_WIDTH // 2 - txt_w//2
         txt_y = WINDOW_HEIGHT // 2 - txt_h//2
-        pygame.draw.rect(screen, (200, 150, 50), (txt_x - 10, txt_y - 10, txt_w + 20, txt_h + 20))
-        screen.blit(text, (txt_x, txt_y))
+        if filename == 'map4.tmx':
+            pygame.draw.rect(screen, (200, 150, 50), (txt_x - 10, txt_y - 10 + 100, txt_w + 20, txt_h + 20))
+            screen.blit(text, (txt_x, txt_y + 100))
+        else:
+            pygame.draw.rect(screen, (200, 150, 50), (txt_x - 10, txt_y - 10, txt_w + 20, txt_h + 20))
+            screen.blit(text, (txt_x, txt_y))
 
 
 def show_time(screen, time):

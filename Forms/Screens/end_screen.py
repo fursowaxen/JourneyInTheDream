@@ -8,7 +8,6 @@ from Forms.use_data import take_data
 def end_screen(screen, time):
     screen.fill((0, 0, 0))
     pg = load_image("pictures/bcg_logo.png")
-    # sb = load_image("pictures/start_btn.png")
     screen.blit(pg, (0, 0))
     font = pygame.font.Font(None, 50)
     txt1 = font.render(f'Вы прошли игру', 1, (50, 70, 0))

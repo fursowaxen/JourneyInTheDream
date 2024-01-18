@@ -121,7 +121,7 @@ class Minigame:
 
         self.clock.tick(FPS)
         self.count += 1
-        if self.count // FPS >= 10:
+        if self.count // FPS >= 60:
             show_message(screen, 'too_long', False)
             return False
 
