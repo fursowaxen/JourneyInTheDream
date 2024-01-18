@@ -1,5 +1,6 @@
 import pygame
 from Forms.CONSTANTS import FPS
+from Forms.services import show_message
 
 
 def get_images(n):
@@ -18,7 +19,7 @@ class Minigame:
         self.lst = ['', [1, 2, 3, 4, 5, 6, 7, 8, 15, 14, 0, 11, 9, 13, 10, 12],
                [1, 2, 3, 4, 5, 6, 12, 7, 9, 14, 10, 15, 13, 0, 8, 11],
                [1, 2, 3, 4, 10, 9, 8, 12, 5, 0, 11, 6, 13, 7, 14, 15],
-               [3, 15, 4, 11, 7, 8, 14, 1, 9, 6, 2, 12, 13, 5, 10]]
+               [3, 15, 4, 11, 7, 8, 14, 1, 9, 6, 2, 5, 10, 12, 13, 0]]
         self.pix = get_images(self.num)
         self.deck = self.lst[num]
         self.pos = (0, 0)
@@ -121,7 +122,9 @@ class Minigame:
         self.clock.tick(FPS)
         self.count += 1
         if self.count // FPS >= 5:
+            show_message(screen, 'too_long', False)
             return False
+
         self.render(screen)
 
     size = width, height = 700, 700

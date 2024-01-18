@@ -4,7 +4,7 @@ from Forms.CONSTANTS import TILE_SIZE, FPS
 
 
 class Hero:
-    def __init__(self, pos):
+    def __init__(self, pos, stay):
         image = load_image('pictures/chars/down_S.png')
         self.x, self.y = pos
         self.gem = False
@@ -13,7 +13,7 @@ class Hero:
         self.image = image
         self.dir = 'down'
         self.count = 0
-        self.staying = True
+        self.staying = stay
 
     def get_position(self):
         return self.x, self.y

@@ -12,18 +12,22 @@ def show_message(screen, filename, can_go, end=False):
             if filename == 'map2.tmx':
                 txt = 'нужен топор'
             if filename == 'map3.tmx':
-                txt = 'нужно зельепротив дракона'
+                txt = 'нужно зелье  против дракона'
             if filename == 'map4.tmx':
                 txt = 'ааааа'
         else:
             if filename == 'map1.tmx':
                 txt = 'этот камень так ярко светится!'
             if filename == 'map2.tmx':
-                txt = 'теперь можно разрубить ветки'
+                txt = 'держи топор. пока'
             if filename == 'map3.tmx':
                 txt = 'из этих ягод можно сделать зелье'
+            if filename == 'map4.tmx':
+                txt = 'ааааа'
         if filename == 'intro':
             txt = 'нужно уходить отсюда!'
+        if filename == 'too_long':
+            txt = 'не будем задерживаться!'
 
         font = pygame.font.Font(None, 50)
         text = font.render(txt, 1, (50, 70, 0))
